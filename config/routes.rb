@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :contacts, only: [:new, :create]
+  root 'contacts#new'
 end
